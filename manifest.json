@@ -3,7 +3,7 @@
 
   "name": "Workflowy code formatter",
   "description": "Makes backtick wrapped text look like code!",
-  "version": "0.1.0",
+  "version": "0.1.1",
 
   "icons": {
     "128": "workflowyCodeFormatterIcon_128.png"
@@ -11,7 +11,7 @@
 
   "content_scripts": [{
     "matches": ["https://workflowy.com/*"],
-    "js": ["workflowyCodeFormatter.js"],
+    "js": ["workflowyCodeFormatter.min.js"],
     "css": ["workflowyCodeFormatter.css"]
   }]
 }
