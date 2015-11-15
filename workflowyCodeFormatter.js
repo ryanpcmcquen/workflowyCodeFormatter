@@ -1,4 +1,4 @@
-// workflowyCodeFormatter v0.1.1 by @ryanpcmcquen
+// workflowyCodeFormatter v0.1.2 by @ryanpcmcquen
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
@@ -30,14 +30,15 @@
     Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content')).map(function(i) {
       // this only seems to work if set as a var
       var replacement = '<code>' + '$&' + '</code>';
-      // only replace on the textcontent so we don't jack up the html,
+      // only match on the textcontent so we avoid false positives
+      //
       // format triple backticks first, in case code inside of
       // triple backticks contains backticks
       // (p.s. this is even capable of formatting itself!)
       if (i.textContent.match(/```[^]*```/g)) {
-        i.innerHTML = i.textContent.replace(/```[^]*```/g, replacement);
+        i.innerHTML = i.innerHTML.replace(/```[^]*```/g, replacement);
       } else {
-        i.innerHTML = i.textContent.replace(/`[^`]*`/g, replacement);
+        i.innerHTML = i.innerHTML.replace(/`[^`]*`/g, replacement);
       }
     });
   };
