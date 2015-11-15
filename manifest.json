@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Workflowy code formatter",
+  "description": "Makes backtick wrapped text look like code!",
+  "version": "0.1.0",
+
+  "icons": {
+    "128": "workflowyCodeFormatterIcon_128.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["https://workflowy.com/*"],
+    "js": ["workflowyCodeFormatter.js"],
+    "css": ["workflowyCodeFormatter.css"]
+  }]
+}
