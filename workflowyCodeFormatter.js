@@ -1,4 +1,4 @@
-// workflowyCodeFormatter v0.1.3 by @ryanpcmcquen
+// workflowyCodeFormatter v0.2.0 by @ryanpcmcquen
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
@@ -24,28 +24,43 @@
 /*jslint browser:true, white:true*/
 
 (function() {
+
   'use strict';
+
   var wcf = function() {
     // i love slice calls
     Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content')).map(function(i) {
-      // this only seems to work if set as a var
-      var replacement = '<code>' + '$&' + '</code>';
-      // only match on the textcontent so we avoid false positives
+      // this only seems to work if set as a var,
+      // also we have to specify a language because the backticks
+      // seem to confuse every highlighter i have tested
+      // ... for now we will use javascript  ;^)
+      var replacement = '<code class="prettyprint lang-js">' + '$&' + '</code>';
+      // only match on the textcontent so we avoid false positives ...
+      // but first we have to see if a code block isn't already there,
+      // so we don't create tags on every new event
       //
       // format triple backticks first, in case code inside of
       // triple backticks contains backticks
       // (p.s. this is even capable of formatting itself!)
-      if (i.textContent.match(/```[^]*```/g)) {
-        i.innerHTML = i.innerHTML.replace(/```[^]*```/g, replacement);
-      } else {
-        i.innerHTML = i.innerHTML.replace(/`[^`]*`/g, replacement);
+      if (!i.innerHTML.match(/<code/g)) {
+        if (i.textContent.match(/```[^]*```/g)) {
+          i.innerHTML = i.innerHTML.replace(/```[^]*```/g, replacement);
+        } else {
+          i.innerHTML = i.innerHTML.replace(/`[^`]*`/g, replacement);
+        }
       }
     });
   };
 
   // need to fire once on load, since the 'focusin' event doesn't happen right away
   window.addEventListener('load', wcf);
+  // syntax highlight after the markup
+  window.addEventListener('load', prettyPrint);
+
   // focusin seems to work really well for the type
   // of changes in workflowy and isn't *too* expensive
   document.addEventListener('focusin', wcf);
+  // syntax highlight after the markup
+  document.addEventListener('focusin', prettyPrint);
+
 }());
