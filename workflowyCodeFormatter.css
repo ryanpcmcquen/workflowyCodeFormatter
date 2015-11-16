@@ -1,4 +1,1 @@
-.page code {
-  /* my green */
-  color: #008a63;
-}
+.page code.prettyprint { font-size: 90%; }
