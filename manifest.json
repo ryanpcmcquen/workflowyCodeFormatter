@@ -12,6 +12,6 @@
   "content_scripts": [{
     "matches": ["https://workflowy.com/*"],
     "js": ["prettify.min.js", "workflowyCodeFormatter.min.js"],
-    "css": ["prettify.min.css", "workflowyCodeFormatter.css"]
+    "css": ["prettify.min.css", "workflowyCodeFormatter.min.css"]
   }]
 }
