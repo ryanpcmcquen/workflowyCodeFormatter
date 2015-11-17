@@ -1,6 +1,8 @@
 # workflowyCodeFormatter
 A simple and lightweight solution to the WorkFlowy code dilemma.
 
+![WCF Marquee](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/wcf_marquee.png)
+
 ### One user said:
 ===
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/ryanpcmcquen">@ryanpcmcquen</a> <a href="https://twitter.com/WorkFlowy">@WorkFlowy</a> Nice and light. Very WorkFlowian.</p>&mdash; J Rawlins (@jprawlins) <a href="https://twitter.com/jprawlins/status/665998935643656192">November 15, 2015</a></blockquote>

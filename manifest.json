@@ -3,10 +3,10 @@
 
   "name": "Workflowy code formatter",
   "description": "Makes backtick wrapped text look like code! {openSource}",
-  "version": "0.2.0",
+  "version": "0.2.1",
 
   "icons": {
-    "128": "workflowyCodeFormatterIcon_128.png"
+    "128": "wcf_icon.png"
   },
 
   "content_scripts": [{

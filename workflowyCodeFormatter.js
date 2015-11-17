@@ -1,4 +1,4 @@
-// workflowyCodeFormatter v0.2.0 by @ryanpcmcquen
+// workflowyCodeFormatter v0.2.1 by @ryanpcmcquen
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
