@@ -47,3 +47,5 @@ If you don't already have a WorkFlowy account, please consider using my [referra
 
 Thanks to Google's [Code Prettify](https://github.com/google/code-prettify) for the syntax highlighting.
 
+Thanks to [Corri Blair](http://www.corriblair.com/) for the awesome graphics!
+
