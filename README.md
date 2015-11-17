@@ -34,11 +34,11 @@ https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbg
 
 Before:
 
-![Before WCF](https://usercontent.irccloud-cdn.com/file/VIDBEc3e/before_WCF.png)
+![Before WCF](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__1.png)
 
 After:
 
-![After WCF](https://usercontent.irccloud-cdn.com/file/E9kGfy38/after_WCF.png)
+![After WCF](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/after_WCF__1.png)
 
 
 If you don't already have a WorkFlowy account, please consider using my [referral link](https://workflowy.com/invite/32bf69e5.lnx) (we'll both get bonus free space)! :tada:
