@@ -32,15 +32,11 @@ https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbg
 
 ===
 
-Before:
-
 ![Before WCF 1](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__1.jpg)
 
-![Before WCF 2](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__2.jpg)
-
-After:
-
 ![After WCF 1](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/after_WCF__1.jpg)
+
+![Before WCF 2](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__2.jpg)
 
 ![After WCF 2](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/after_WCF__2.jpg)
 
