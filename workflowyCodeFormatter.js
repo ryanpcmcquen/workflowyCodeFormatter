@@ -1,4 +1,4 @@
-// workflowyCodeFormatter v0.2.3 by @ryanpcmcquen
+/* workflowyCodeFormatter v0.2.4 by @ryanpcmcquen */
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
@@ -45,7 +45,8 @@
       if (!i.innerHTML.match(/<code/g)) {
         if (i.textContent.match(/```[^]*```/g)) {
           i.innerHTML = i.innerHTML.replace(/```[^]*```/g, replacement);
-        } else {
+        }
+        if (i.textContent.match(/`[^`]*`/g)) {
           i.innerHTML = i.innerHTML.replace(/`[^`]*`/g, replacement);
         }
       }
