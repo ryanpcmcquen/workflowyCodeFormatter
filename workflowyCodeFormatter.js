@@ -1,4 +1,4 @@
-/* workflowyCodeFormatter v0.2.5 by @ryanpcmcquen */
+/*! workflowyCodeFormatter v0.3.0 by ryanpcmcquen */
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
@@ -20,34 +20,43 @@
 // with this program (most likely, a file named COPYING).  If not, see
 // <https://www.gnu.org/licenses/>.
 //
-/*global window*/
+/*global window, prettyPrint, hljs*/
 /*jslint browser:true, white:true*/
 
-(function() {
 
+(function () {
   'use strict';
 
-  var wcf = function() {
-    // i love slice calls
-    Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content')).map(function(i) {
-      // this only seems to work if set as a var,
-      // also we have to specify a language because the backticks
-      // seem to confuse every highlighter i have tested
-      // ... for now we will use javascript  ;^)
-      var replacement = '<code class="prettyprint lang-js">' + '$&' + '</code>';
+  var wcf = function () {
+    // return the regex markup, so the language can be dynamic
+    var replacement = function (matchedText, language) {
+      // if (language === 'l') {
+      //   language = 'js';
+      // } else {
+      language = language || 'js';
+      // }
+      // console.log(language);
+      // console.log('<code class="prettyprint lang-' + language + '">' + matchedText + '</code>');
+      return ('<code class="' + language + '">' + matchedText + '</code>');
+    };
+    var pageContentArray = Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content'));
+    pageContentArray.map(function (i) {
       // only match on the textcontent so we avoid false positives ...
-      // but first we have to see if a code block isn't already there,
+      // but first we have to see if a code block is in the html,
       // so we don't create tags on every new event
-      //
-      // format triple backticks first, in case code inside of
-      // triple backticks contains backticks
-      // (p.s. this is even capable of formatting itself!)
-      if (!i.innerHTML.match(/<code/g)) {
-        if (i.textContent.match(/```[^]*```/g)) {
-          i.innerHTML = i.innerHTML.replace(/```[^]*```/g, replacement);
+      if (!i.innerHTML.match(/<code/gi)) {
+        // match the code language, so we can support a lot of awesome syntax highlighting
+        var codeLanguage = String('js');
+        // var codeLanguage = String(i.textContent.match(/^```[\w]+$/gim)).slice(3);
+        // multi-line code
+        var tripleTickRegex = new RegExp(/^```[^]*^```/gm);
+        if (i.textContent.match(tripleTickRegex)) {
+          i.innerHTML = i.innerHTML.replace(tripleTickRegex, replacement('$&', codeLanguage));
         }
-        if (i.textContent.match(/`[^`]*`/g)) {
-          i.innerHTML = i.innerHTML.replace(/`[^`]*`/g, replacement);
+        // inline code
+        var singleTickRegex = new RegExp(/`[^`]*`/g);
+        if (i.textContent.match(singleTickRegex)) {
+          i.innerHTML = i.innerHTML.replace(singleTickRegex, replacement('$&', codeLanguage));
         }
       }
     });
@@ -56,12 +65,13 @@
   // need to fire once on load, since the 'focusin' event doesn't happen right away
   window.addEventListener('load', wcf);
   // syntax highlight after the markup
-  window.addEventListener('load', prettyPrint);
+  // window.addEventListener('load', prettyPrint);
+  window.addEventListener('load', hljs.initHighlighting);
 
   // focusin seems to work really well for the type
   // of changes in workflowy and isn't *too* expensive
   document.addEventListener('focusin', wcf);
   // syntax highlight after the markup
-  document.addEventListener('focusin', prettyPrint);
-
+  // document.addEventListener('focusin', prettyPrint);
+  document.addEventListener('focusin', hljs.initHighlighting);
 }());
