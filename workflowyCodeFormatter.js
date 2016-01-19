@@ -32,12 +32,15 @@
     var replacement = function (matchedText, language) {
       // if (language === 'l') {
       //   language = 'js';
+
       // } else {
-      language = language || 'js';
+      console.log(language);
+      language = language || 'javascript';
+
       // }
       // console.log(language);
       // console.log('<code class="prettyprint lang-' + language + '">' + matchedText + '</code>');
-      return ('<code class="' + language + '">' + matchedText + '</code>');
+      return ('<pre><code class="language-' + language + '">' + matchedText + '</code></pre>');
     };
     var pageContentArray = Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content'));
     pageContentArray.map(function (i) {
@@ -46,15 +49,15 @@
       // so we don't create tags on every new event
       if (!i.innerHTML.match(/<code/gi)) {
         // match the code language, so we can support a lot of awesome syntax highlighting
-        var codeLanguage = String('js');
-        // var codeLanguage = String(i.textContent.match(/^```[\w]+$/gim)).slice(3);
+        // var codeLanguage = String('javascript');
+        var codeLanguage = String(i.textContent.match(/^```[\w]+$/ig)).slice(3);
         // multi-line code
-        var tripleTickRegex = new RegExp(/^```[^]*^```/gm);
+        var tripleTickRegex = new RegExp(/^```[\w\W]*?^```$/gim);
         if (i.textContent.match(tripleTickRegex)) {
           i.innerHTML = i.innerHTML.replace(tripleTickRegex, replacement('$&', codeLanguage));
         }
         // inline code
-        var singleTickRegex = new RegExp(/`[^`]*`/g);
+        var singleTickRegex = new RegExp(/`[^`]+`/g);
         if (i.textContent.match(singleTickRegex)) {
           i.innerHTML = i.innerHTML.replace(singleTickRegex, replacement('$&', codeLanguage));
         }
@@ -66,12 +69,12 @@
   window.addEventListener('load', wcf);
   // syntax highlight after the markup
   // window.addEventListener('load', prettyPrint);
-  window.addEventListener('load', hljs.initHighlighting);
+  // window.addEventListener('load', hljs.initHighlighting);
 
   // focusin seems to work really well for the type
   // of changes in workflowy and isn't *too* expensive
   document.addEventListener('focusin', wcf);
   // syntax highlight after the markup
   // document.addEventListener('focusin', prettyPrint);
-  document.addEventListener('focusin', hljs.initHighlighting);
+  // document.addEventListener('focusin', hljs.initHighlighting);
 }());

@@ -12,10 +12,10 @@
   "content_scripts": [{
     "matches": ["https://workflowy.com/*"],
     "js": [
-      "highlightjs/highlight.pack.js",
+      "prism/prism.js",
       "workflowyCodeFormatter.js"
     ],
-    "css": ["highlightjs/default.css"]
+    "css": ["prism/prism.css"]
   }]
 
 }
