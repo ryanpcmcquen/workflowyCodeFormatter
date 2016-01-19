@@ -22,6 +22,72 @@ Unlike 'WorkFlowy for coders', this solution is lightweight, pure JavaScript, an
 
 Any text wrapped in 1 or 3 backticks will be rendered as code (inspired by Markdown syntax).
 
+Use 1 backtick for inline code, and 3 backticks to wrap multi-line code. Note that the 3 backticks MUST be on their own line. The language must be specified or else JavaScript ('js') is the default.
+
+Available languages are:
+
+**********
+```
+aea
+agc
+apollo
+basic
+cbm
+cl
+clj
+css
+dart
+el
+erl
+erlang
+fs
+go
+hs
+lasso
+lassoscript
+latex
+lgt
+lisp
+ll
+llvm
+logtalk
+ls
+lsp
+lua
+matlab
+ml
+mumps
+n
+nemerle
+pascal
+proto
+r
+rd
+rkt
+rust
+s
+scala
+scm
+Splus
+sql
+ss
+swift
+tcl
+tex
+vb
+vbs
+vhd
+vhdl
+wiki
+xq
+xquery
+yaml
+yml
+```
+**********
+
+Enjoy!
+
 https://github.com/ryanpcmcquen/workflowyCodeFormatter
 
 ===
