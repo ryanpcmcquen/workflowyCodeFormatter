@@ -11,11 +11,9 @@
 
   "content_scripts": [{
     "matches": ["https://workflowy.com/*"],
-    "js": [
-      "prism/prism.js",
-      "workflowyCodeFormatter.js"
-    ],
-    "css": ["prism/prism.css"]
-  }]
+    "js": ["workflowyCodeFormatter.js"]
+  }],
+
+  "content_security_policy": "script-src 'self' https://cdn.rawgit.com; object-src 'self'"
 
 }

@@ -20,9 +20,19 @@
 // with this program (most likely, a file named COPYING).  If not, see
 // <https://www.gnu.org/licenses/>.
 //
-/*global window, prettyPrint, hljs*/
+/*global window, PR, hljs*/
 /*jslint browser:true, white:true*/
 
+// load in latest google code-prettify
+(function () {
+  'use strict';
+  var gcp = document.createElement('script');
+  gcp.type = 'text/javascript';
+  gcp.async = true;
+  gcp.src = 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcp, s);
+}());
 
 (function () {
   'use strict';
@@ -35,12 +45,12 @@
 
       // } else {
       console.log(language);
-      language = language || 'javascript';
+      language = language || 'js';
 
       // }
       // console.log(language);
       // console.log('<code class="prettyprint lang-' + language + '">' + matchedText + '</code>');
-      return ('<pre><code class="language-' + language + '">' + matchedText + '</code></pre>');
+      return ('<code class="prettyprint lang-' + language + '">' + matchedText + '</code>');
     };
     var pageContentArray = Array.prototype.slice.call(document.getElementById('pageContainer').querySelectorAll('.content'));
     pageContentArray.map(function (i) {
@@ -49,8 +59,8 @@
       // so we don't create tags on every new event
       if (!i.innerHTML.match(/<code/gi)) {
         // match the code language, so we can support a lot of awesome syntax highlighting
-        // var codeLanguage = String('javascript');
-        var codeLanguage = String(i.textContent.match(/^```[\w]+$/ig)).slice(3);
+        // var codeLanguage = String('js');
+        var codeLanguage = String(i.textContent.match(/```+([\w])+/ig)).slice(3);
         // multi-line code
         var tripleTickRegex = new RegExp(/^```[\w\W]*?^```$/gim);
         if (i.textContent.match(tripleTickRegex)) {
@@ -68,13 +78,13 @@
   // need to fire once on load, since the 'focusin' event doesn't happen right away
   window.addEventListener('load', wcf);
   // syntax highlight after the markup
-  // window.addEventListener('load', prettyPrint);
+  window.addEventListener('load', PR.prettyPrint);
   // window.addEventListener('load', hljs.initHighlighting);
 
   // focusin seems to work really well for the type
   // of changes in workflowy and isn't *too* expensive
   document.addEventListener('focusin', wcf);
   // syntax highlight after the markup
-  // document.addEventListener('focusin', prettyPrint);
+  document.addEventListener('focusin', PR.prettyPrint);
   // document.addEventListener('focusin', hljs.initHighlighting);
 }());
