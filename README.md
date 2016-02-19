@@ -61,61 +61,16 @@ xsl
 ```
 EXTENDED:
 ```
-aea
-agc
-apollo
-basic
-cbm
-cl
-clj
 css
 dart
-el
-erl
 erlang
-fs
 go
 hs
-lasso
-lassoscript
-latex
-lgt
-lisp
-ll
-llvm
-logtalk
-ls
-lsp
 lua
-matlab
-ml
-mumps
-n
-nemerle
-pascal
-proto
 r
-rd
-rkt
 rust
-s
-scala
-scm
-Splus
 sql
-ss
-swift
-tcl
-tex
-vb
-vbs
-vhd
-vhdl
 wiki
-xq
-xquery
-yaml
-yml
 ```
 **********
 
@@ -147,4 +102,3 @@ If you don't already have a WorkFlowy account, please consider using my [referra
 Thanks to Google's [Code Prettify](https://github.com/google/code-prettify) for the syntax highlighting.
 
 Thanks to [Corri Blair](http://www.corriblair.com/) for the awesome graphics!
-
