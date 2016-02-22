@@ -20,10 +20,11 @@
 // with this program (most likely, a file named COPYING).  If not, see
 // <https://www.gnu.org/licenses/>.
 //
-/*global window, codeFormatter, PR*/
+/*global window, codeFormatter, PR, prettyPrint*/
 /*jslint browser:true, white:true*/
 
 (function () {
+
   'use strict';
 
   // need to fire once on load, since the 'focusin' event doesn't happen right away
@@ -40,15 +41,4 @@
     PR.prettyPrint();
   });
 
-
 }());
-
-
-
-// try {
-//   PR.prettyPrint();
-// } catch (ignore) {
-//   setTimeout(function () {
-//     PR.prettyprint();
-//   }, 100);
-// }
