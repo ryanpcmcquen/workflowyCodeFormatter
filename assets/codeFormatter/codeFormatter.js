@@ -22,12 +22,14 @@
 
 /*global window*/
 /*jslint browser:true, white:true*/
+
 (function () {
 
   'use strict';
 
   var codeFormatter = function (selector) {
     var replacement = function (matchedText, language) {
+      language = language || 'js';
       return ("<code class='prettyprint lang-" + (language) + "'>" + String(matchedText) + "</code>");
     };
     var contentArray = Array.prototype.slice.call(document.querySelectorAll(selector));
@@ -39,13 +41,18 @@
     contentArray.map(function (i) {
       if (i.hasAttribute('contenteditable')) {
         if (!i.innerHTML.match(/<code/gi)) {
+          // single tick regex only works if it is outside the triple tick match
+          if (i.textContent.match(singleTickRegex)) {
+            i.innerHTML = i.innerHTML.replace(singleTickRegex, replacement("$&"));
+          }
+          // match the code language, so we can
+          // support a lot of awesome syntax highlighting
           if ((i.textContent.match(codeLanguageRegex) !== null) && (i.textContent !== undefined)) {
-            // match the code language, so we can
-            // support a lot of awesome syntax highlighting
             // this needs a little extra filtering, but cascading is cool
             var codeLanguage = String(i.textContent.match(codeLanguageRegex)).slice(3).split(/(\s+)/)[0].trim();
             if (i.textContent.match(tripleTickRegex)) {
               i.innerHTML = i.innerHTML.replace(tripleTickRegex, replacement("$&", codeLanguage));
+            }
           }
         }
       }

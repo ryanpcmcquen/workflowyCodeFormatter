@@ -32,7 +32,6 @@
     codeFormatter('.content');
     // syntax highlight after the markup
     PR.prettyPrint();
-
   });
 
   window.addEventListener('focusin', function () {
