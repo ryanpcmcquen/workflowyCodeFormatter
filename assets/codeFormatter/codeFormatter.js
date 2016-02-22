@@ -22,7 +22,6 @@
 
 /*global window*/
 /*jslint browser:true, white:true*/
-
 (function () {
 
   'use strict';
@@ -47,10 +46,6 @@
             var codeLanguage = String(i.textContent.match(codeLanguageRegex)).slice(3).split(/(\s+)/)[0].trim();
             if (i.textContent.match(tripleTickRegex)) {
               i.innerHTML = i.innerHTML.replace(tripleTickRegex, replacement("$&", codeLanguage));
-            }
-            if (i.textContent.match(singleTickRegex)) {
-              i.innerHTML = i.innerHTML.replace(singleTickRegex, replacement("$&", codeLanguage));
-            }
           }
         }
       }
