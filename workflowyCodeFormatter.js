@@ -20,32 +20,35 @@
 // with this program (most likely, a file named COPYING).  If not, see
 // <https://www.gnu.org/licenses/>.
 //
-/*global window, codeFormatter*/
+/*global window, codeFormatter, PR*/
 /*jslint browser:true, white:true*/
 
 (function () {
   'use strict';
 
   // need to fire once on load, since the 'focusin' event doesn't happen right away
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     codeFormatter('.content');
     // syntax highlight after the markup
-    window.PR.prettyPrint();
+    PR.prettyPrint();
+
   });
 
-  // focusin seems to work really well for the type
-  // of changes in workflowy and isn't *too* expensive
-  setInterval(function () {
+  window.addEventListener('focusin', function () {
     codeFormatter('.content');
     // syntax highlight after the markup
-    window.PR.prettyPrint();
-    // try {
-    //   PR.prettyPrint();
-    // } catch (ignore) {
-    //   setTimeout(function () {
-    //     PR.prettyprint();
-    //   }, 100);
-    // }
+    PR.prettyPrint();
+  });
 
-  }, 2000);
+
 }());
+
+
+
+// try {
+//   PR.prettyPrint();
+// } catch (ignore) {
+//   setTimeout(function () {
+//     PR.prettyprint();
+//   }, 100);
+// }
