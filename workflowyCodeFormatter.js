@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.4.0 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.4.1 by ryanpcmcquen */
 //
 // Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 //
@@ -20,7 +20,7 @@
 // with this program (most likely, a file named COPYING).  If not, see
 // <https://www.gnu.org/licenses/>.
 //
-/*global window, codeFormatter, PR, prettyPrint*/
+/*global window, codeFormatter, PR*/
 /*jslint browser:true, white:true*/
 
 (function () {

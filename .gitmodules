@@ -1,0 +1,3 @@
+[submodule "assets/codeFormatter"]
+	path = assets/codeFormatter
+	url = git@github.com:ryanpcmcquen/codeFormatter.git
