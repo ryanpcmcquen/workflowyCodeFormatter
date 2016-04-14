@@ -4,7 +4,7 @@
 
   "name": "WorkFlowy code formatter",
   "description": "Makes backtick wrapped text look like code! {openSource}",
-  "version": "0.4.1",
+  "version": "0.4.2",
 
   "icons": {
     "128": "wcf_icon.png"
