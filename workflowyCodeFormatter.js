@@ -1,6 +1,6 @@
 /*! workflowyCodeFormatter v0.4.2 by ryanpcmcquen */
 //
-// Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
+// Ryan P.C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
