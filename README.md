@@ -30,6 +30,10 @@ To specify a language, just add the shorthand name of the language like so:
   ```rust
 ```
 
+
+Note that extensions do not work inside of Chrome apps, so if you are using the WorkFlowy 'app', this extension will not be running. This is a limitation of Chrome apps and extensions.
+
+
 Available languages are:
 
 **********
