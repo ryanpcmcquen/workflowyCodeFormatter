@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.4.4 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.5.0 by ryanpcmcquen */
 //
 // Ryan P. C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
 //
@@ -21,23 +21,25 @@
 // <https://www.gnu.org/licenses/>.
 //
 /*global window, codeFormatter, PR*/
-/*jslint browser:true, white:true*/
+/*jslint browser:true*/
 
 (function () {
 
-  'use strict';
+    "use strict";
 
-  // need to fire once on load, since the 'focusin' event doesn't happen right away
-  window.addEventListener('load', function () {
-    codeFormatter('.content');
-    // syntax highlight after the markup
-    PR.prettyPrint();
-  });
+    var nikeIt = function () {
+        codeFormatter(".content");
+        // Syntax highlight after the markup:
+        PR.prettyPrint();
+    };
 
-  window.addEventListener('focusin', function () {
-    codeFormatter('.content');
-    // syntax highlight after the markup
-    PR.prettyPrint();
-  });
+    // Fire on load, since the "focusin" event doesn't happen right away.
+    window.addEventListener("load", function () {
+        nikeIt();
+    });
+
+    window.addEventListener("focusin", function () {
+        nikeIt();
+    });
 
 }());

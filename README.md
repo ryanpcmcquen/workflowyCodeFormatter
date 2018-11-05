@@ -22,7 +22,7 @@ Unlike 'WorkFlowy for coders', this solution is lightweight, pure JavaScript, an
 
 Any text wrapped in 1 or 3 backticks will be rendered as code (inspired by Markdown syntax).
 
-Use 1 backtick for inline code, and 3 backticks to wrap multi-line code. Note that the 3 backticks MUST be on their own line. If no language is specified, JavaScript ('js') will be used.
+Use 1 backtick for inline code, and 3 backticks to wrap multi-line code. Note that the 3 backticks MUST be on their own line. If no language is specified, the code will _not_ be syntax highlighted (introduced in version `0.5.0`, thanks to [@tpantin](https://github.com/tpantin)).
 
 To specify a language, just add the shorthand name of the language like so:
 
