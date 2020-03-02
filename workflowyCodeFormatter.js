@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.5.0 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.5.3 by ryanpcmcquen */
 //
 // Ryan P. C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
 
