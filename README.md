@@ -22,61 +22,9 @@ Unlike 'WorkFlowy for coders', this solution is lightweight, pure JavaScript, an
 
 Any text wrapped in 1 or 3 backticks will be rendered as code (inspired by Markdown syntax).
 
-Use 1 backtick for inline code, and 3 backticks to wrap multi-line code. Note that the 3 backticks MUST be on their own line. If no language is specified, the code will _not_ be syntax highlighted (introduced in version `0.5.0`, thanks to [@tpantin](https://github.com/tpantin)).
-
-To specify a language, just add the shorthand name of the language like so:
-
-```
-  ```rust
-```
-
+Use 1 backtick for inline code, and 3 backticks to wrap multi-line code. Note that the 3 backticks MUST be on their own line.
 
 Note that extensions do not work inside of Chrome apps, so if you are using the WorkFlowy 'app', this extension will not be running. This is a limitation of Chrome apps and extensions.
-
-
-Available languages are:
-
-**********
-STANDARD:
-```
-bsh
-c
-cc
-cpp
-cs
-csh
-cyc
-cv
-htm
-html
-java
-js
-m
-mxml
-perl
-pl
-pm
-py
-rb
-sh
-xhtml
-xml
-xsl
-```
-EXTENDED:
-```
-css
-dart
-erlang
-go
-hs
-lua
-r
-rust
-sql
-wiki
-```
-**********
 
 Enjoy!
 
@@ -102,8 +50,6 @@ https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbg
 If you don't already have a WorkFlowy account, please consider using my [referral link](https://workflowy.com/invite/32bf69e5.lnx) (we'll both get bonus free space)! :tada:
 
 ===
-
-Thanks to Google's [Code Prettify](https://github.com/google/code-prettify) for the syntax highlighting.
 
 Thanks to [Corri Blair](http://www.corriblair.com/) for the awesome graphics!
 
