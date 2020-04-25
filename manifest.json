@@ -1,36 +1,23 @@
 {
-
-"manifest_version": 2,
+    "manifest_version": 2,
 
     "name": "WorkFlowy code formatter",
     "description": "Makes backtick wrapped text look like code! {openSource}",
-    "version": "0.5.3",
+    "version": "0.6.0",
 
     "icons": {
         "128": "wcf_icon.png"
     },
 
-    "content_scripts": [{
-        "run_at": "document_end",
-        "matches": ["https://workflowy.com/*"],
-        "css": [
-            "assets/codeFormatter/assets/code-prettify/src/prettify.css"
-        ],
-        "js": [
-            "assets/codeFormatter/assets/code-prettify/src/prettify.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-css.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-dart.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-erlang.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-go.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-hs.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-lua.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-r.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-rust.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-sql.js",
-            "assets/codeFormatter/assets/code-prettify/src/lang-wiki.js",
-            "assets/codeFormatter/codeFormatter.js",
-            "workflowyCodeFormatter.js"
-        ]
-    }]
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["https://workflowy.com/*"],
 
+            "js": [
+                "assets/codeFormatter/codeFormatter.js",
+                "workflowyCodeFormatter.js"
+            ]
+        }
+    ]
 }
