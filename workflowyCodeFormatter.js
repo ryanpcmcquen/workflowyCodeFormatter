@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.8.1 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.8.2 by ryanpcmcquen */
 //
 // Ryan P. C. McQuen | Everett, WA
 
@@ -9,7 +9,7 @@
     'use strict';
 
     var nikeIt = function() {
-        codeFormatter('.content');
+        codeFormatter('.content[contenteditable]');
         // After several rejections from add-on stores
         // complaining about files inside of Google
         // Prettify, I have decided to remove it
