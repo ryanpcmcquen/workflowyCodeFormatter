@@ -12,6 +12,12 @@ A simple and lightweight solution to the WorkFlowy code dilemma.
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ===
 
+### What happened to syntax highlighting?
+
+If you've been a user for a while, you may remember that this extension supported syntax highlighting at one time. Unfortunately, both the Chrome and Firefox extension reviews have become more stringent over time, and even though I was using a reputable open source syntax highlighting library (https://github.com/googlearchive/code-prettify), I was constantly getting rejections or would randomly have the extension unpublished because some file in that library was flagged as nefarious. Technically the support is still baked into this extension, but you would need to manually run `PR.prettyPrint()` alongside the same events that this extension fires on.
+
+If someone knows of lighter weight libraries that would be easier to include in this project, I am open to changes that would bring syntax highlighting back.
+
 ### Web store README
 
 ===
@@ -19,8 +25,6 @@ A simple and lightweight solution to the WorkFlowy code dilemma.
 Make backtick wrapped text look like code! {openSource}
 
 An open source extension to make backtick wrapped text look like code in WorkFlowy.
-
-Now with syntax highlighting!
 
 Unlike 'WorkFlowy for coders', this solution is lightweight, pure JavaScript, and still allows editing text in all views.
 
