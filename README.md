@@ -14,9 +14,7 @@ A simple and lightweight solution to the WorkFlowy code dilemma.
 
 ### What happened to syntax highlighting?
 
-If you've been a user for a while, you may remember that this extension supported syntax highlighting at one time. Unfortunately, both the Chrome and Firefox extension reviews have become more stringent over time, and even though I was using a reputable open source syntax highlighting library (https://github.com/googlearchive/code-prettify), I was constantly getting rejections or would randomly have the extension unpublished because some file in that library was flagged as nefarious. Technically the support is still baked into this extension, but you would need to manually run `PR.prettyPrint()` alongside the same events that this extension fires on.
-
-If someone knows of lighter weight libraries that would be easier to include in this project, I am open to changes that would bring syntax highlighting back.
+If you've been a user for a while, you may remember that this extension supported language specific syntax highlighting at one time. Unfortunately, both the Chrome and Firefox extension reviews have become more stringent over time, and even though I was using a reputable open source syntax highlighting library (https://github.com/googlearchive/code-prettify), I was constantly getting rejections or would randomly have the extension unpublished because some file in that library was flagged as nefarious. For that reason, I've switched to Microlight (https://asvd.github.io/microlight/). Now the syntax highlighting is language and theme agnostic, and baked right into the `codeFormatter` library (https://github.com/ryanpcmcquen/codeFormatter).
 
 ### Web store README
 

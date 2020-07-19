@@ -1,3 +1,4 @@
 [submodule "assets/codeFormatter"]
 	path = assets/codeFormatter
-	url = git@github.com:ryanpcmcquen/codeFormatter.git
+    url = git@github.com:ryanpcmcquen/codeFormatter.git
+	branch = gh-pages
