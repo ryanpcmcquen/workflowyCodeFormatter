@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.9.1 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.9.2 by ryanpcmcquen */
 //
 // Ryan P. C. McQuen | Everett, WA
 
