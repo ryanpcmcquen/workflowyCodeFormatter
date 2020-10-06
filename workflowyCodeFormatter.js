@@ -1,4 +1,4 @@
-/*! workflowyCodeFormatter v0.9.2 by ryanpcmcquen */
+/*! workflowyCodeFormatter v0.9.3 by ryanpcmcquen */
 //
 // Ryan P. C. McQuen | Everett, WA
 
@@ -25,9 +25,10 @@
         nikeIt();
     });
 
-//     window.addEventListener('click', function () {
-//         nikeIt();
-//     });
+    // This makes input wonky, reported in #19.
+    //window.addEventListener('click', function () {
+    //    nikeIt();
+    //});
 
     nikeIt();
 })();
