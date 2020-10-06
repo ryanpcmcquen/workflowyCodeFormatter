@@ -6,11 +6,11 @@ A simple and lightweight solution to the WorkFlowy code dilemma.
 
 ### One user said:
 
-===
+---
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/ryanpcmcquen">@ryanpcmcquen</a> <a href="https://twitter.com/WorkFlowy">@WorkFlowy</a> Nice and light. Very WorkFlowian.</p>&mdash; J Rawlins (@jprawlins) <a href="https://twitter.com/jprawlins/status/665998935643656192">November 15, 2015</a></blockquote>
 
-===
+---
 
 ### What happened to syntax highlighting?
 
@@ -18,7 +18,7 @@ If you've been a user for a while, you may remember that this extension supporte
 
 ### Web store README
 
-===
+---
 
 Make backtick wrapped text look like code! {openSource}
 
@@ -36,13 +36,13 @@ Enjoy!
 
 https://github.com/ryanpcmcquen/workflowyCodeFormatter
 
-===
+---
 
 #### Web store link:
 
 https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbglgikjghocmbbbbkfemn
 
-===
+---
 
 ![Before WCF 1](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__1.jpg)
 
@@ -54,7 +54,7 @@ https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbg
 
 If you don't already have a WorkFlowy account, please consider using my [referral link](https://workflowy.com/invite/32bf69e5.lnx) (we'll both get bonus free space)! :tada:
 
-===
+---
 
 Thanks to [Corri Blair](http://www.corriblair.com/) for the awesome graphics!
 
