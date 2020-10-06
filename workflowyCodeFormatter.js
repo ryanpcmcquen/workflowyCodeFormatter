@@ -25,9 +25,9 @@
         nikeIt();
     });
 
-    window.addEventListener('click', function () {
-        nikeIt();
-    });
+//     window.addEventListener('click', function () {
+//         nikeIt();
+//     });
 
     nikeIt();
 })();
