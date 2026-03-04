@@ -40,7 +40,7 @@ https://github.com/ryanpcmcquen/workflowyCodeFormatter
 
 #### Web store link:
 
-https://chrome.google.com/webstore/detail/workflowy-code-formatter/kglihipcanlbglgikjghocmbbbbkfemn
+https://chromewebstore.google.com/detail/workflowy-code-formatter/kglihipcanlbglgikjghocmbbbbkfemn
 
 ---
 
